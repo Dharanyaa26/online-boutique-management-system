@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function nxt(){
+            window.location.assign("dress.html");
+        }
+        function nxpg(){
+            window.location.assign("buy.html")
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women Top</title>
+    <link rel = "stylesheet" href = "./css/des1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class = "main-wrapper">
+        <div class = "container">
+            <div class = "product-div">
+                <div class = "product-div-left">
+                    <div class = "img-container">
+                        <img src = "./img/top1 a.png" alt = "watch">
+                    </div>
+                    <div class = "hover-container">
+                        <div><img src = "./img/top1.png"></div>
+                        <div><img src = "./img/top1 a.png"></div>
+                        <div><img src = "./img/top1 b.png"></div>
+                        <div><img src = "./img/top1 c.png"></div>
+                        
+                    </div>
+                </div>
+                <div class = "product-div-right">
+                    <span class = "product-name">Karigari</span>
+                    <span class = "product-price">Blue Print Mandarin Collar empire pure cotton top</span>
+                    <div class = "product-rating">
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star-half-alt"></i></span>
+                        <span>4.8K Ratings</span>
+                    </div>
+                    <h3>Size:</h3>
+                    <p>S   M   L  XL   XXL</p>
+                    <p class = "product-description"><span><h3>Size:</h3></span>S  M  L  XL   XXL<br/><span> <h3>Material & care:</h3></span>100% cotton</br>Hand Wash<br/><span><h3>Transparency:</h3></span>Opaque</p>
+                    <div class = "btn-groups">
+                        <button type = "button" class = "add-cart-btn" onclick="nxpg()"><i class = "fas fa-shopping-cart"></i>Add to Cart</button>
+                        <button type = "button" class = "buy-now-btn"><i class = "fas fa-wallet"></i>Wish List</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="left-corner-button" onclick="nxt()">Back</button>
+
+    <script>
+      const allHoverImages = document.querySelectorAll('.hover-container div img');
+const imgContainer = document.querySelector('.img-container');
+
+window.addEventListener('DOMContentLoaded', () => {
+    allHoverImages[0].parentElement.classList.add('active');
+});
+
+allHoverImages.forEach((image) => {
+    image.addEventListener('mouseover', () =>{
+        imgContainer.querySelector('img').src = image.src;
+        resetActiveImg();
+        image.parentElement.classList.add('active');
+    });
+});
+
+function resetActiveImg(){
+    allHoverImages.forEach((img) => {
+        img.parentElement.classList.remove('active');
+    });
+}
+    </script>
+</body>
+</html>
